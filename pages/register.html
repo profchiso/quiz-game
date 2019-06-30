@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quiz Game | App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/bootstrap.min.css"/>
+    <link href="../styles/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/main.css" />
+    
+</head>
+<body>
+ <div class="container-fluid">
+     <header>
+        <nav class="navbar navbar-expand-md fixed-top navbar-inverse  text-right">
+                <a class="navbar-brand " href="../index.html"><img src="../img/logo.png" width="30px" height="30px" id="logo"> Decagon Quiz Game </a>
+                <button style="color: green" class="navbar-toggler btn btn-success" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
+                  <span class="navbar-toggler-icon"></span>menu
+                </button>
+                <div class="collapse navbar-collapse  " id="navbarNavDropdown">
+                  <ul class="navbar-nav text-right">
+                        <li class="nav-item">
+                                <a class="nav-link" href="../index.html"><b>Login</b></a>
+                              </li>
+                  </ul>
+                </div>
+              </nav>
+            </header>
+              <!--nav bar ends-->
+              <main>
+                  <section></section>
+
+
+              <!--carousel starts-->
+              <section id="slideCarousel">
+                  <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                          <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+                          <li data-slide-to="1" data-target="#myCarousel"></li>
+                          <li data-slide-to="2" data-target="#myCarousel"></li>
+                          <li data-slide-to="3" data-target="#myCarousel"></li>
+                          <li data-slide-to="4" data-target="#myCarousel"></li>
+                      </ol>
+                      <div class="carousel-inner" role="listbox">
+                          <div class="carousel-item active">
+                              <img class="img-slide" src="../img/4.jpg" class="d-block w-100">
+                          </div>
+                          <div class="carousel-item ">
+                              <img class="img-slide" src="../img/1.jpg" class="d-block w-100">
+                          </div>
+                          <div class="carousel-item ">
+                              <img class="img-slide" src="../img/3.jpg" class="d-block w-100">
+                          </div>
+                          <div class="carousel-item ">
+                              <img  class="img-slide" src="../img/2.jpg" class="d-block w-100">
+                          </div>
+                          <div class="carousel-item ">
+                              <img class="img-slide" src="../img/5.jpg" class="d-block w-100">
+                          </div>
+                      </div>
+                      <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span> 
+                      </a>
+                      <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span> 
+                      </a>
+                  </div>
+              </section>
+              <!--carousel ends-->
+
+
+       
+        <section>
+            <div>
+                    <h4 class="text-center" id="welcome-text">Welcome to Decagon Web development Quiz App </h4>
+                    <p class="text-center"><b> Register to  be able to take the quiz</b></p>
+            </div>
+        </section>
+        <section>
+          
+          <form id="reg-form" method="POST" name="reg-form" >
+                <div class="form-group">
+                       <!-- <label for="player-name">Name</label>-->
+                        <input type="text" required name="player-name" class="form-control" id="player-name" aria-describedby="emailHelp" placeholder="Enter your name" autofocus>
+                     
+                      </div>
+                <div class="form-group">
+                  <!--<label for="email">Email address</label>-->
+                  <input type="email" required name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                 
+                </div>
+                <div class="form-group">
+                  <!--<label for="password">Password</label>-->
+                  <input type="password" required name="password" class="form-control" id="password" placeholder="Enter Password">
+                </div>
+                
+                <div><button type="button" id="reg-form-btn" name="reg-form-btn"class="btn btn-primary">Register</button></div>
+              </form>
+        </section>
+          
+
+    </main>
+    <!--main ends-->
+
+<!--footer starts-->
+    <footer>
+        <div id="social-media">
+            <div>
+                <h4 class="text-center" style="color: green">Follow us on...</h4>
+            </div>
+            <div id="socail-media-icons">
+                 <a href=""><i class="icon ion-social-facebook"></i></a>
+                <a href=""><i class="fa ion-social-twitter"></i></a>
+                <a href=""><i class="fa ion-social-linkedin"></i></a>
+                <a href=""><i class="fa ion-social-google"></i></a>
+                <a href=""><i class="fa ion-social-youtube"></i></a>
+            </div>
+        </div>
+
+       <div>
+            <p class="text-center"><b>&copy;  Okorie Chinedu Sunday Quiz Game App  2019 - </b>  <b id="date-display"></b></p>
+        </div>
+
+    </footer>
+<!--footer ends-->
+<!--requried scripts-->
+    <script src="../scripts/jquery.js"></script>
+    <script src="../scripts/jquery-migrate.min.js"></script>
+    <script src="../scripts/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/bootstrap.min.js"></script>
+    <script src="../scripts/bootstrap.min.js"></script>
+    <script src="../scripts/main.js"></script>
+    
+    </div>
+</body>
+</html>

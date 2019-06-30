@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quiz Game | App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/bootstrap.min.css"/>
+    <link href="../styles/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/main.css" />
+    
+</head>
+<body>
+ <div class="container-fluid">
+     <header>
+        <nav class="navbar navbar-expand-md fixed-top navbar-inverse text-right">
+                <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" width="30px" height="30px" id="logo"> Decagon Quiz Game </a>
+                <button style="color: green" class="navbar-toggler btn btn-success" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
+                  <span class="navbar-toggler-icon"></span>menu
+                </button>
+                <div class="collapse navbar-collapse  " id="navbarNavDropdown">
+                  <ul class="navbar-nav text-right">
+                    
+                    <li class="nav-item">
+                            <a class="nav-link" href="../index.html"><b>Logout</b></a>
+                     </li>
+                   
+                  </ul>
+                </div>
+              </nav>
+            </header>
+              <!--nav bar ends-->
+              <main>
+        <section class="first-section">
+            <div>
+                    <h3 class="text-center" id="welcome-text">Welcome to Decagon Web development Quiz App </h3>
+                    
+            </div>
+        </section>
+        <section>
+                <div>
+                       <h1 class="text-center" id="welcome-text"><b>Add Questions to the Quiz Database</b></h1>
+                      
+                    </div>
+        </section>
+        <section id="view-questions-section">
+            
+                    <div class="table-responsive">
+                            
+                            <p class="text-center">Table of question and answers</p>            
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>Question</th>
+                                  <th>OptionA</th>
+                                  <th>OptionB</th>
+                                  <th>OptionC</th>
+                                  <th>OptionD</th>
+                                  <th>Answer</th>
+                                <th>Actions</th>
+                                  
+                                  
+                                </tr>
+                              </thead>
+                              <tbody id="populate">
+                                
+                              </tbody>
+                            </table>
+                          </div>
+        </section>
+        <section id="view-a-section">
+            
+            <div class="table-responsive">
+                    
+                    <a href="http://localhost:3000/pages/actions.html" class="btn btn-info">view all qustions</a>            
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>Question</th>
+                          <th>OptionA</th>
+                          <th>OptionB</th>
+                          <th>OptionC</th>
+                          <th>OptionD</th>
+                          <th>Answer</th>
+                        
+                          
+                          
+                        </tr>
+                      </thead>
+                      <tbody id="populateA">
+                        
+                      </tbody>
+                    </table>
+                  </div>
+</section>
+
+        <section id="actions-section">
+            <div class="container">
+                    <form name="question-actions" method="POST" id="question-actions">
+                            <div class="form-group">
+                              <label for="question-id">Enter Question ID</label>
+                              <input required type="text" class="form-control" id="question-id" aria-describedby="emailHelp" placeholder="Enter Question ID" name="question-id" autofocus>
+                             
+                            </div>
+                            
+                            <div class="form-group">
+                                <p id="success-msg" class="text-center alert alert-success">Action Successful</p>
+                                <p id="error-msg" class="text-center alert alert-danger">Action Unsuccessful</p>
+                                <button type="button" class="btn btn-primary" id="view-a-question-btn" name="view-a-question-btn">View A Question</button>
+                           </div>
+                        </form>
+            </div>
+        </section>
+        
+        <section id="section-add-update-question">
+            <div class="container">
+            <div >
+                <h3 class="text-center"><b>Add Question</b></h3>
+
+            </div>
+                <form method="POST" id="update-add" autocomplete="on">
+                        <div id="question-div" class="form-group">
+                                <label for="Question">Question</label>
+                                <input required type="text" name="question" class="form-control" id="question"  placeholder="Enter Question">
+                        </div>
+                        <div class="form-group">
+                                <label for="A">A</label>
+                                <input type="text" required name="A" class="form-control" id="A"  placeholder="Enter text description"> 
+                         </div>
+                         <div class="form-group">
+                                <label for="B">B</label>
+                                <input type="text" required name="B" class="form-control" id="B"  placeholder="Enter text description"> 
+                         </div>
+                         <div class="form-group">
+                                <label for="C">C</label>
+                                <input type="text" required name="C" class="form-control" id="C"  placeholder="Enter text description"> 
+                         </div>
+                         <div class="form-group">
+                                <label for="D">D</label>
+                                <input type="text" required name="D" class="form-control" id="D"  placeholder="Enter text description"> 
+                         </div>
+                       
+                        <div id="answer-div" class="form-group">
+                            <label for="player-name">Answer</label>
+                            <input class="form-control" required type="text"name="answer" id="answer" maxlength="1" placeholder="Enter answer to Question (only Char A,B,C,D is allowed)"/>
+
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary" name="add-question-btn" id="add-question-btn">Add </button>
+                            
+                      </div>
+                    </form>
+                </div>
+        </section>      
+
+        <section id="section-update-question">
+            <div class="container">
+            <div >
+                <h3 class="text-center"><b>Update Question</b></h3>
+
+            </div>
+                <form method="POST" id="update-add" autocomplete="on">
+
+                    <div id="question-div" class="form-group">
+                        <label for="Question">Question ID</label>
+                        <input required type="text" name="questionId" class="form-control" id="questionId" readonly autofocus >
+                </div>
+                        <div id="question-div" class="form-group">
+                                <label for="Question">Question</label>
+                                <input required type="text" name="Uquestion" class="form-control" id="Uquestion"  placeholder="Enter Question">
+                        </div>
+                        <div class="form-group">
+                                <label for="A">A</label>
+                                <input type="text" required name="UA" class="form-control" id="UA"  placeholder="Enter text description"> 
+                         </div>
+                         <div class="form-group">
+                                <label for="B">B</label>
+                                <input type="text" required name="UB" class="form-control" id="UB"  placeholder="Enter text description"> 
+                         </div>
+                         <div class="form-group">
+                                <label for="C">C</label>
+                                <input type="text" required name="UC" class="form-control" id="UC"  placeholder="Enter text description"> 
+                         </div>
+                         <div class="form-group">
+                                <label for="D">D</label>
+                                <input type="text" required name="UD" class="form-control" id="UD"  placeholder="Enter text description"> 
+                         </div>
+                       
+                        <div id="answer-div" class="form-group">
+                            <label for="player-name">Answer</label>
+                            <input class="form-control" required type="text"name="answer" id="Uanswer" maxlength="1" placeholder="Enter answer to Question (only Char A,B,C,D is allowed)"/>
+
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary" name="update-question-btn" id="update-question-btn">Update</button>
+                            
+                      </div>
+                    </form>
+                </div>
+        </section>      
+
+    </main>
+    <!--main ends-->
+
+<!--footer starts-->
+    <footer>
+        <div id="social-media">
+            <div>
+                <h4 class="text-center" style="color: green">Follow us on...</h4>
+            </div>
+            <div id="socail-media-icons">
+                 <a href=""><i class="icon ion-social-facebook"></i></a>
+                <a href=""><i class="fa ion-social-twitter"></i></a>
+                <a href=""><i class="fa ion-social-linkedin"></i></a>
+                <a href=""><i class="fa ion-social-google"></i></a>
+                <a href=""><i class="fa ion-social-youtube"></i></a>
+            </div>
+        </div>
+       <div>
+            <p class="text-center"><b> &copy; Okorie Chinedu Sunday Quiz Game App   2019 - </b>  <b id="date-display"></b></p>
+        </div>
+
+    </footer>
+    <!--footer ends-->
+
+<!--requried scripts-->
+    <script src="../scripts/jquery.js"></script>
+    <script src="../scripts/jquery-migrate.min.js"></script>
+    <script src="../scripts/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/bootstrap.min.js"></script>
+    <script src="../scripts/bootstrap.min.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/questions.js"></script>
+    <script src="../scripts/fetch-questions.js"></script>
+    </div>
+</body>
+</html>

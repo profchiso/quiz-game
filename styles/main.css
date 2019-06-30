@@ -1,0 +1,79 @@
+.navbar-nav li{
+    float: right!important;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  #slideCarousel{
+    margin-top: 45px;
+    padding: 2px 2px 2px 2px;
+    
+  }
+  div .carousel-item img{
+    height: 600px;
+  }
+  
+  a {
+    color: #18d26e;
+    transition: 0.5s;
+    font-size: 20px;
+  }
+  #navbarNavDropdown li a{
+    float: right;
+  }
+  .img-slide{
+     width: 100% !important;
+      height: 400px !important;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+  }
+  #socail-media-icons{
+      text-align: center;
+  }
+  #socail-media-icons a{
+    
+        font-size: 20px;
+         display:inline-block;
+         background: #333;
+         color: green;
+         line-height: 1;
+         padding: 8px 0;
+         margin-right: 4px;
+         border-radius: 50%;
+         text-align: center !important;
+         width: 36px;
+         height: 36px;
+         transition: 0.3s;
+       }
+       #socail-media-icons a:hover{
+         color: aliceblue;
+       }
+       .first-section{
+         margin-top: 90px;
+       }
+       .navbar-inverse ,footer{
+         background-color: black !important;
+       }
+       footer p{
+         color: aliceblue;
+       }
+  .navbar-toggler{
+    color: beige;
+  }
+  .btn{
+    margin-bottom: 15px;
+    margin-left: 15px;
+  }
+  footer p{
+    margin-top: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 10px;
+   
+  }
+  #welcome-text{
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #ab02a6
+  }
+  

@@ -1,0 +1,73 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "decagon",
+      "email": "decagon@gmail.com",
+      "password": "decagon",
+      "score": 10
+    },
+    {
+      "player-name": "okorie chinedu sunday",
+      "email": "okoriechinedusunday@gmail.com",
+      "password": "chinedu",
+      "id": 2
+    },
+    {
+      "player-name": "dec",
+      "email": "dec@gmail.com",
+      "password": "dec",
+      "id": 3
+    },
+    {
+      "player-name": "oko",
+      "email": "ooo",
+      "password": "ddd",
+      "id": 4
+    },
+    {
+      "player-name": "ben",
+      "email": "b",
+      "password": "b",
+      "id": 5
+    },
+    {
+      "player-name": "dec",
+      "email": "ken@gmail.com",
+      "password": "dd",
+      "id": 6
+    },
+    {
+      "player-name": "okorie chinedu sunday",
+      "email": "okoriechinedusunday@gmail.com",
+      "password": "chinedu",
+      "id": 7
+    },
+    {
+      "player-name": "chinedu",
+      "email": "chinedus@gmail.com",
+      "password": "chinedu",
+      "id": 8
+    }
+  ],
+  "questions": [
+    {
+      "question": "what type of programming language is javascript?",
+      "optionA": " SERVER",
+      "optionB": "CLIENT",
+      "optionC": "NONE OF THE ABOVE",
+      "optionD": "CLIENT AND SERVER",
+      "answer": "B",
+      "id": 1
+    },
+    {
+      "question": "what is your name",
+      "optionA": "CHINEDU",
+      "optionB": "NO",
+      "optionC": "YES",
+      "optionD": "okoro",
+      "answer": "A",
+      "id": 3
+    }
+  ]
+}
