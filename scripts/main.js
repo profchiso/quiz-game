@@ -46,7 +46,7 @@ $(document).ready(function(){
         else{
 
            $.ajax({
-                url: 'http://localhost:3000/users',
+                url: 'https://profchiso.github.io/quiz-game/users',
                 dataType: 'json',
                 type: 'POST',
                 contentType: 'application/json',
@@ -54,7 +54,7 @@ $(document).ready(function(){
                 success: function(){
                     var sms="  your registration is successful";
                    alert(userName +sms );
-                   window.location.assign("http://localhost:3000/../index.html");
+                   window.location.assign("https://profchiso.github.io/quiz-game/../index.html");
                 },
                 error: function(){
                     alert('Error Submitting your data');
@@ -77,7 +77,7 @@ $(document).ready(function(){
 
             if(answer=='A' || answer=='B'  || answer=='C' || answer=='D'){
                 $.ajax({
-                    url: 'http://localhost:3000/questions',
+                    url: 'https://profchiso.github.io/quiz-game/questions',
                     dataType: 'json',
                     type: 'POST',
                     contentType: 'application/json',
@@ -85,7 +85,7 @@ $(document).ready(function(){
                     success: function(){
                         var sms=" Question is successfully added";
                          alert(sms );
-                        window.location.assign("http://localhost:3000/pages/actions.html");
+                        window.location.assign("https://profchiso.github.io/quiz-game/pages/actions.html");
                         
                         
                         $('#success-msg').text("Question is successfully added");
@@ -122,7 +122,7 @@ $(document).ready(function(){
             var users = JSON.parse(this.responseText);
             for (var i in users){
                 if(users[i].email==username && users[i].password==password){
-                    window.location.assign("http://localhost:3000/pages/quiz.html");
+                    window.location.assign("https://profchiso.github.io/quiz-game/pages/quiz.html");
                 
              }else{
                 $('#msg-div').show();
@@ -143,7 +143,7 @@ $(document).ready(function(){
 function viewAQuestion(){
     $("#error-msg").hide();
     var qid=$('#question-id').val();
-    xhr.open('GET', 'http://localhost:3000/questions', true);
+    xhr.open('GET', 'https://profchiso.github.io/quiz-game/questions', true);
     xhr.onload = function() {
         if(this.status == 200){
             var questions = JSON.parse(this.responseText);
@@ -182,12 +182,12 @@ function viewAQuestion(){
      var beSure=window.confirm(`Do you really want to delete Question ${e}?`)
      if(beSure){
     $.ajax({
-        url:"http://localhost:3000/questions/"+e,
+        url:"https://profchiso.github.io/quiz-game/"+e,
         dataType:"json",
         type:'DELETE',     
         success:function(){
           alert(`question ${e} deleted`);
-         window.location.assign('http://localhost:3000/pages/actions.html');
+         window.location.assign('https://profchiso.github.io/quiz-game/pages/actions.html');
       }
     }); 
 }else{
@@ -206,7 +206,7 @@ function fetchQuestion(e){
     var answer=$('#Uanswer');
     var questionId=$('#questionId');
     var qid=e
-    xhr.open('GET', 'http://localhost:3000/questions', true);
+    xhr.open('GET', 'https://profchiso.github.io/quiz-game/questions', true);
     xhr.onload = function() {
         if(this.status == 200){
             var questions = JSON.parse(this.responseText);
@@ -246,7 +246,7 @@ function fetchQuestion(e){
 
             if(answer=='A' || answer=='B'  || answer=='C' || answer=='D'){
                 $.ajax({
-                    url: 'http://localhost:3000/questions/'+id,
+                    url: 'https://profchiso.github.io/quiz-game/'+id,
                     dataType: 'json',
                     type: 'PUT',
                     contentType: 'application/json',
@@ -254,7 +254,7 @@ function fetchQuestion(e){
                     success: function(){
                         var sms=` Question ${id} successfully updated`;
                          alert(sms );
-                        window.location.assign("http://localhost:3000/pages/actions.html");
+                        window.location.assign("https://profchiso.github.io/quiz-game/pages/actions.html");
                         
                         
                         
