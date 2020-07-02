@@ -3,7 +3,7 @@ let total = 0;
 var xhr = new XMLHttpRequest();
 $(document).ready(function(){
     $('#display-answer').hide();
-    xhr.open('GET', 'http://localhost:3000/questions', true);
+    xhr.open('GET', 'https://profchiso.github.io/quiz-game/questions', true);
     xhr.onload = function() {
         if(this.status == 200){
             
