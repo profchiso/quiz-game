@@ -46,7 +46,7 @@ $(document).ready(function(){
         else{
 
            $.ajax({
-                url: 'https://profchiso.github.io/quiz-game/users',
+                url: 'https://my-json-server.typicode.com/users',
                 dataType: 'json',
                 type: 'POST',
                 contentType: 'application/json',
@@ -77,7 +77,7 @@ $(document).ready(function(){
 
             if(answer=='A' || answer=='B'  || answer=='C' || answer=='D'){
                 $.ajax({
-                    url: 'https://profchiso.github.io/quiz-game/questions',
+                    url: 'https://my-json-server.typicode.com/questions',
                     dataType: 'json',
                     type: 'POST',
                     contentType: 'application/json',
@@ -116,7 +116,7 @@ $(document).ready(function(){
     }else if(password==""){
         alert('password required');
     }else{
-    xhr.open('GET', 'https://profchiso.github.io/quiz-game/users', true);
+    xhr.open('GET', 'https://my-json-server.typicode.com/users', true);
     xhr.onload = function() {
         if(this.status == 200){
             var users = JSON.parse(this.responseText);
@@ -143,7 +143,7 @@ $(document).ready(function(){
 function viewAQuestion(){
     $("#error-msg").hide();
     var qid=$('#question-id').val();
-    xhr.open('GET', 'https://profchiso.github.io/quiz-game/questions', true);
+    xhr.open('GET', 'https://my-json-server.typicode.com/questions', true);
     xhr.onload = function() {
         if(this.status == 200){
             var questions = JSON.parse(this.responseText);
@@ -182,7 +182,7 @@ function viewAQuestion(){
      var beSure=window.confirm(`Do you really want to delete Question ${e}?`)
      if(beSure){
     $.ajax({
-        url:"https://profchiso.github.io/quiz-game/"+e,
+        url:"https://my-json-server.typicode.com/"+e,
         dataType:"json",
         type:'DELETE',     
         success:function(){
@@ -206,7 +206,7 @@ function fetchQuestion(e){
     var answer=$('#Uanswer');
     var questionId=$('#questionId');
     var qid=e
-    xhr.open('GET', 'https://profchiso.github.io/quiz-game/questions', true);
+    xhr.open('GET', 'https://my-json-server.typicode.com/questions', true);
     xhr.onload = function() {
         if(this.status == 200){
             var questions = JSON.parse(this.responseText);
@@ -246,7 +246,7 @@ function fetchQuestion(e){
 
             if(answer=='A' || answer=='B'  || answer=='C' || answer=='D'){
                 $.ajax({
-                    url: 'https://profchiso.github.io/quiz-game/'+id,
+                    url: 'https://my-json-server.typicode.com/'+id,
                     dataType: 'json',
                     type: 'PUT',
                     contentType: 'application/json',
