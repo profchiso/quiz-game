@@ -116,7 +116,7 @@ $(document).ready(function(){
     }else if(password==""){
         alert('password required');
     }else{
-    xhr.open('GET', 'http://localhost:3000/users', true);
+    xhr.open('GET', 'https://profchiso.github.io/quiz-game/users', true);
     xhr.onload = function() {
         if(this.status == 200){
             var users = JSON.parse(this.responseText);
