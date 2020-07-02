@@ -3,7 +3,7 @@ $(document).ready(function(){
     pullQuestions();
     //function to pull out questions from the database to the actions page
     function pullQuestions(){
-        xhr.open('GET', 'http://localhost:3000/questions', true);
+        xhr.open('GET', 'https://profchiso.github.io/quiz-game/questions', true);
         xhr.onload = function() {
             if(this.status == 200){
                 var questions = JSON.parse(this.responseText);
